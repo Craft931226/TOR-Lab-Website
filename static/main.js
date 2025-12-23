@@ -28,9 +28,24 @@ const currentPage = (() => {
   return path === "" ? "index.html" : path;
 })();
 
+const navAlias = {
+  "upper-ocean-thermal-structure.html": "research.html",
+};
+
+let matched = false;
+
 linkItems.forEach((link) => {
   const href = link.getAttribute("href");
   if (href === currentPage) {
     link.classList.add("is-active");
+    matched = true;
   }
 });
+
+if (!matched && navAlias[currentPage]) {
+  const target = navAlias[currentPage];
+  const fallbackLink = linkItems.find((link) => link.getAttribute("href") === target);
+  if (fallbackLink) {
+    fallbackLink.classList.add("is-active");
+  }
+}
