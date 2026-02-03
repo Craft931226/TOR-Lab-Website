@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Backend (FastAPI)",
+      "type": "shell",
+      "command": "cd backend ; .\\.venv\\Scripts\\activate ; uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Caddy (Dev)",
+      "type": "shell",
+      "command": ".\\caddy_windows_amd64.exe run --config .\\Caddyfile",
+      "problemMatcher": []
+    }
+  ]
+}
