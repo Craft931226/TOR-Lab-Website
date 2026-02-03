@@ -88,3 +88,19 @@ videoPreviews.forEach((preview) => {
 
   preview.addEventListener("click", playVideo);
 });
+
+const newsToggle = document.querySelector("[data-news-toggle]");
+const moreNews = document.querySelector("#more-news");
+
+if (newsToggle && moreNews) {
+  newsToggle.addEventListener("click", () => {
+    const isExpanded = newsToggle.getAttribute("aria-expanded") === "true";
+    newsToggle.setAttribute("aria-expanded", String(!isExpanded));
+    if (isExpanded) {
+      moreNews.hidden = true;
+    } else {
+      moreNews.hidden = false;
+      moreNews.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+}

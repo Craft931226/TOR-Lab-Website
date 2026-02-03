@@ -45,6 +45,10 @@ img {
   height: auto;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 24px;
@@ -573,6 +577,20 @@ p {
   gap: 12px;
 }
 
+.news-more {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.news-grid-more {
+  margin-top: 16px;
+}
+
+.news-toggle[aria-expanded="true"] {
+  filter: brightness(1.05);
+  box-shadow: 0 6px 20px rgba(var(--shadow-color), 0.3);
+}
+
 .news-image {
   width: 320px;
   height: auto;
@@ -690,7 +708,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
-    height: 70px;
+    height: auto;
   }
 
   .brand-row {
