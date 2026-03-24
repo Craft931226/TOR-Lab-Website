@@ -693,6 +693,69 @@ p {
   background: var(--surface);
 }
 
+.data-area {
+  align-items: start;
+}
+
+.data-status {
+  margin: 2px 0 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(46, 139, 192, 0.1);
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.data-status.is-error {
+  background: rgba(195, 54, 54, 0.12);
+  color: #9a1f1f;
+}
+
+.data-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.data-head-row h2 {
+  margin-bottom: 0;
+}
+
+.data-user {
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.data-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.data-list-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: rgba(101, 168, 214, 0.08);
+}
+
+.data-list-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.data-list-item p {
+  margin-bottom: 8px;
+}
+
+.data-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .faq dt {
   font-weight: 600;
   margin-top: 12px;
